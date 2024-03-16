@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/categories/index", 
+    "pages/categories/index",
     "pages/publishJob/index",
     "pages/mine/index",
     "pages/jobinfo/jobinfo",
     "pages/myinfo/myinfo",
-    "pages/recruitment/recruitment"
+    "pages/recruitment/recruitment",
+    "pages/mine/myInfo"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -26,7 +27,7 @@
         "selectedIconPath": "icons/home_active.png"
       },
       {
-        "pagePath": "pages/categories/index", 
+        "pagePath": "pages/categories/index",
         "text": "分类",
         "iconPath": "icons/category.png",
         "selectedIconPath": "icons/category_active.png"
@@ -46,5 +47,3 @@
     ]
   }
 }
-
-

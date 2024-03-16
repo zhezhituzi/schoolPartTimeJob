@@ -1,9 +1,10 @@
 <view class="container">
   <image src="/images/welcome-banner.png" mode="aspectFill" class="banner-img"></image>
   <view class="menu-container">
-    <view class="menu-item" bindtap="navigateToPage" data-url="/pages/job-search/job-search">寻找工作</view>
-    <view class="menu-item" bindtap="navigateToPage" data-url="/pages/post-job/post-job">发布招聘</view>
-    <view class="menu-item-long" bindtap="navigateToPage" data-url="/pages/find-resume/find-resume">完善我的信息</view>
+    <view class="menu-top">
+      <view class="menu-item left" bindtap="navigateToPage" data-url="/pages/categories/index">寻找工作</view>
+      <view class="menu-item right" bindtap="navigateToPage" data-url="/pages/publishJob/index">发布招聘</view>
+    </view>
+    <view class="menu-bottom" bindtap="navigateToPage" data-url="/pages/mine/index">完善我的信息</view>
   </view>
-
 </view>

@@ -34,7 +34,7 @@ Page({
   // 底部导航点击事件处理函数
   onTabItemTap(item) {
     // 根据点击的 tabBar 项进行跳转
-    const pathMap = ['/pages/index/index', '/pages/categories/categories', '/pages/notifications/index', '/pages/mine/index'];
+    const pathMap = ['/pages/index/index', '/pages/categories/categories', '/pages/publishJob/index', '/pages/mine/index'];
     const path = pathMap[item.index];
     if (path) {
       wx.switchTab({
