@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/categories/index", 
-    "pages/notifications/index",
+    "pages/publishJob/index",
     "pages/mine/index",
     "pages/jobinfo/jobinfo",
-    "pages/me/me",
+    "pages/myinfo/myinfo",
     "pages/recruitment/recruitment"
   ],
   "window": {
@@ -32,8 +32,8 @@
         "selectedIconPath": "icons/category_active.png"
       },
       {
-        "pagePath": "pages/notifications/index",
-        "text": "通知",
+        "pagePath": "pages/publishJob/index",
+        "text": "商家",
         "iconPath": "icons/notification.png",
         "selectedIconPath": "icons/notification_active.png"
       },
