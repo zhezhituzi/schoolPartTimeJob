@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="profile-section">
+    <image class="avatar" src="/path/to/your/avatar.jpg"></image>
+    <view class="id-name-section">
+      <text class="user-id">ID: 131213213123</text>
+      <text class="user-name">姓名</text>
+    </view>
+  </view>
+
+  <view class="nav-section">
+    <navigator class="nav-item" url="/path/to/myinfo">我的信息</navigator>
+    <navigator class="nav-item" url="/path/to/myrecruit">我的招聘</navigator>
+    <navigator class="nav-item" url="/path/to/mysubmissions">我的投递</navigator>
+    <navigator class="nav-item" url="/path/to/contactus">联系我们</navigator>
+  </view>
+
+  <!-- 底部Tab栏 -->
+  <!-- ... -->
+</view>
+
+
+
+
+

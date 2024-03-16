@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.weui-cells {
+  margin-top: 10px;
+}
+
+.weui-cell {
+  display: flex;
+  align-items: center;
+}
+
+.weui-cell__hd {
+  margin-right: 10px;
+}
+
+.weui-cell__bd {
+  flex-grow: 1;
+}
+
+.weui-label {
+  width: 80px;
+}
+
+.weui-input {
+  width: 100%;
+  padding: 0 15px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.weui-btn-area {
+  margin-top: 30px;
+}
+
+.weui-btn {
+  background-color: #1AAD19;
+}

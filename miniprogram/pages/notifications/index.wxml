@@ -1,0 +1,54 @@
+<view class="page">
+  <view class="form-container">
+    <view class="weui-cells weui-cells_form">
+      <!-- Existing Fields -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">店铺名称</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入店铺名称"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">店铺位置</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入店铺位置"/>
+        </view>
+      </view>
+      
+      <!-- New Fields -->
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">岗位信息</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入岗位信息"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">工作时段</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入工作时段"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">时薪</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" type="number" placeholder="请输入时薪"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">行业</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" placeholder="请输入行业分类"/>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">工作内容</label></view>
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入详细的工作内容" rows="3"></textarea>
+        </view>
+      </view>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn weui-btn_primary">提交招聘信息</button>
+    </view>
+  </view>
+</view>

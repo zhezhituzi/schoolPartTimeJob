@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="profile-section">
+    <image class="avatar" src="{{avatar}}" mode="aspectFill" />
+    <view class="info-list">
+      <label class="weui-label">姓名</label>
+      <input class="weui-input" placeholder="请输入姓名" value="{{name}}" />
+      <label class="weui-label">性别</label>
+      <input class="weui-input" placeholder="请输入性别" value="{{gender}}" />
+      <label class="weui-label">班级</label>
+      <input class="weui-input" placeholder="请输入班级" value="{{class}}" />
+      <label class="weui-label">电话</label>
+      <input class="weui-input" placeholder="请输入电话" value="{{phone}}" />
+      <label class="weui-label">备注</label>
+      <input class="weui-input" placeholder="请输入备注" value="{{notes}}" />
+    </view>
+  </view>
+  <view class="tab-bar">
+    <!-- Tab items -->
+  </view>
+</view>
+
+
+

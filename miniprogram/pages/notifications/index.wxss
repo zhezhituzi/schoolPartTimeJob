@@ -1,0 +1,46 @@
+.page {
+  background-color: #f8f8f8;
+}
+
+.form-container {
+  margin-top: 15px;
+  background-color: #ffffff;
+}
+
+.weui-cells_form {
+  margin-top: 0;
+}
+
+.weui-cell {
+  padding: 10px 15px;
+}
+
+.weui-cell__hd .weui-label {
+  margin-bottom: 5px;
+  color: #888;
+}
+
+.weui-cell__bd .weui-input,
+.weui-cell__bd .weui-textarea {
+  background-color: #f7f7f7;
+  border-radius: 4px;
+}
+
+.weui-cell__bd .weui-input {
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.weui-cell__bd .weui-textarea {
+  padding: 10px;
+}
+
+.weui-btn-area {
+  margin: 15px;
+}
+
+.weui-btn {
+  background-color: #1aad19;
+}
+

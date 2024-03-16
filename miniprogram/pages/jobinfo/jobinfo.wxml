@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="search-container">
+    <input class="search-input" type="text" placeholder="搜索岗位" />
+  </view>
+  <view class="filter-container">
+    <view class="filter-item">位置</view>
+    <view class="filter-item">行业</view>
+    <view class="filter-item">时段</view>
+  </view>
+  <view class="jobs-list">
+    <!-- 列表循环渲染 -->
+    <block wx:for="{{jobs}}" wx:key="id">
+      <view class="job-item" bindtap="onJobTap" data-id="{{item.id}}">
+        <text class="job-title">{{item.title}}</text>
+        <text class="job-salary">{{item.salary}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 底部导航栏 -->
+  <view class="weui-tabbar">
+    <view class="weui-tabbar__item weui-bar__item--on" bindtap="onTabTap" data-index="0">
+      <text class="weui-tabbar__label">首页</text>
+    </view>
+    <view class="weui-tabbar__item" bindtap="onTabTap" data-index="1">
+      <text class="weui-tabbar__label">岗位信息</text>
+    </view>
+    <!-- 更多 Tab 项目 -->
+  </view>
+</view>
+

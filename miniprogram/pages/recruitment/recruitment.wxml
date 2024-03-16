@@ -1,0 +1,24 @@
+<view class="container">
+  <form class="form">
+    <view class="weui-cells weui-cells_form">
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">店铺名称</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="storeName" placeholder="请输入店铺名称" />
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd"><label class="weui-label">店铺位置</label></view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name="location" placeholder="请输入店铺位置" />
+        </view>
+      </view>
+      <!-- 类似的结构用于岗位信息、时段和时薪、行业等 -->
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="submit">提交信息</button>
+    </view>
+  </form>
+  <!-- 底部导航 -->
+  <tab-bar/>
+</view>
