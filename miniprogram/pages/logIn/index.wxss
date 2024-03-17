@@ -1,0 +1,19 @@
+/* pages/login/login.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+}

@@ -6,7 +6,9 @@
     "pages/mine/index",
     "pages/jobinfo/jobinfo",
     "pages/recruitment/recruitment",
-    "pages/mine/myInfo/index"
+    "pages/mine/myInfo/index",
+    "pages/jobOffers/index",
+    "pages/logIn/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -27,13 +29,13 @@
       },
       {
         "pagePath": "pages/categories/index",
-        "text": "分类",
+        "text": "找工作",
         "iconPath": "icons/category.png",
         "selectedIconPath": "icons/category_active.png"
       },
       {
-        "pagePath": "pages/publishJob/index",
-        "text": "商家",
+        "pagePath": "pages/jobOffers/index",
+        "text": "发工作",
         "iconPath": "icons/notification.png",
         "selectedIconPath": "icons/notification_active.png"
       },

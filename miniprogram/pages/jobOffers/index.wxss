@@ -39,41 +39,10 @@
   margin-left: auto; /* 将位置信息推向右侧 */
 }
 
-
-
-
-
-
 .job-industry {
   font-size: 14px;
   color: #666;
   margin-top: 5px;
-}
-
-
-
-.search-bar {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: #f8f8f8; /* 调整背景颜色以区分搜索栏 */
-}
-
-.search-input {
-  flex-grow: 1; /* 让输入框占据大部分空间 */
-  margin-right: 8px; /* 与搜索按钮的间隔 */
-  padding: 8px;
-  border: none; /* 移除边框 */
-  border-radius: 15px; /* 输入框圆角 */
-  background-color: #fff; /* 输入框背景颜色 */
-}
-
-.search-btn {
-  padding: 8px 16px;
-  background-color: #1aad19; /* 微信绿色 */
-  color: #fff; /* 按钮文字颜色 */
-  border-radius: 15px; /* 按钮圆角 */
-  border: none; /* 移除边框 */
 }
 
 .filter-bar {
@@ -89,6 +58,17 @@
   background-color: #f1f1f1; /* 筛选项背景颜色 */
 }
 
-/* 兼职信息框样式保持不变 */
+/* 添加工作按钮样式 */
+.add-job-btn {
+  position: fixed; /* 固定定位 */
+  right: 20px; /* 距离右边界20px */
+  bottom: 20px; /* 距离底部70px，根据你的导航条高度调整 */
+  width: 90px; /* 按钮宽度 */
+  height: 90px; /* 按钮高度 */
+  z-index: 1000; /* 确保在最上层 */
+}
 
-/* 省略其他样式 */
+.add-job-icon {
+  width: 100%; /* 图标宽度填满按钮 */
+  height: 100%; /* 图标高度填满按钮 */
+}

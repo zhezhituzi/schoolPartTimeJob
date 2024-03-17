@@ -1,10 +1,4 @@
 <view class="page">
-  <!-- Search Bar -->
-  <view class="search-bar">
-    <input class="search-input" type="text" placeholder="搜索岗位" bindinput="onSearchInput"/>
-    <button class="search-btn" bindtap="onSearch">搜索</button>
-  </view>
-  
   <!-- Filter Options -->
   <view class="filter-bar">
     <view class="filter-item" data-filter="location" bindtap="onFilterTap">位置</view>
@@ -24,7 +18,11 @@
       </view>
     </block>
   </view>
-
+  
+  <!-- 添加图标，定位在页面右下角 -->
+  <navigator url="/pages/publishJob/index" class="add-job-btn">
+    <image src="/icons/addJob.png" class="add-job-icon"></image>
+  </navigator>
 
   <!-- Bottom Navigation Bar (Defined in app.json) -->
 </view>

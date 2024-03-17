@@ -1,0 +1,7 @@
+<!-- pages/login/login.wxml -->
+<view class="container">
+  <view class="login-section">
+    <button open-type="getUserProfile" bindtap="onGetUserProfile">获取头像和昵称</button>
+    <button open-type="getPhoneNumber" bindgetphonenumber="onGetPhoneNumber">获取手机号</button>
+  </view>
+</view>

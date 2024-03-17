@@ -14,9 +14,9 @@
       </view>
 
       <!-- 发布招聘按钮 -->
-      <view class="menu-item-right" bindtap="navigateToPage" data-url="/pages/publishJob/index">
+      <view class="menu-item-right" bindtap="navigateToPage" data-url="/pages/jobOffers/index">
         <image src="/icons/zhao-right.png" class="icon-right"></image>
-        <text>发布招聘</text>
+        <text>我的招聘</text>
       </view>
     </view>
 

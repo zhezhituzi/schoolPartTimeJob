@@ -1,24 +1,24 @@
 <view class="page">
   <view class="profile-section">
-    <image class="avatar" src="/path/to/your/avatar.jpg"></image>
-    <view class="id-name-section">
-      <text class="user-id">ID: 131213213123</text>
-      <text class="user-name">姓名</text>
-    </view>
+    <block wx:if="{{!userInfo.avatarUrl}}">
+      <!-- 未登录状态 -->
+      <button class="not-logged-in" oopen-type="getUserProfile" bindtap="onGetUserProfile" lang="zh_CN">点击加载头像</button>
+    </block>
+    <block wx:else>
+      <!-- 已登录状态 -->
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="id-name-section">
+        <text class="user-name">{{userInfo.nickName}}</text>
+      </view>
+    </block>
   </view>
 
   <view class="nav-section">
-    <navigator class="nav-item" url="/path/to/myinfo">我的信息</navigator>
-    <navigator class="nav-item" url="/path/to/myrecruit">我的招聘</navigator>
-    <navigator class="nav-item" url="/path/to/mysubmissions">我的投递</navigator>
-    <navigator class="nav-item" url="/path/to/contactus">联系我们</navigator>
+    <navigator class="nav-item" bindtap="navigateToLogin">我的信息</navigator>
+    <navigator class="nav-item" bindtap="navigateToLogin">我的招聘</navigator>
+    <navigator class="nav-item" bindtap="navigateToLogin">我的投递</navigator>
+    <navigator class="nav-item" bindtap="navigateToLogin">联系我们</navigator>
   </view>
 
-  <!-- 底部Tab栏 -->
-  <!-- ... -->
+
 </view>
-
-
-
-
-

@@ -46,5 +46,22 @@
   border-bottom: 1px solid #eeeeee;
 }
 
+.not-logged-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+  background-color: #cccccc; /* 占位符颜色 */
+}
 
 
+.login-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007aff; /* 蓝色背景 */
+  color: #ffffff; /* 白色文字 */
+  border-radius: 5px; /* 圆角边框 */
+  border: none; /* 去除边框 */
+  font-size: 16px; /* 字体大小 */
+}
