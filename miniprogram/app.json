@@ -5,9 +5,8 @@
     "pages/publishJob/index",
     "pages/mine/index",
     "pages/jobinfo/jobinfo",
-    "pages/myinfo/myinfo",
     "pages/recruitment/recruitment",
-    "pages/mine/myInfo"
+    "pages/mine/myInfo/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",

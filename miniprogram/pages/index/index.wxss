@@ -22,11 +22,46 @@
   border-bottom: 1px solid #ddd; /* Horizontal line */
 }
 
-.menu-item {
+.menu-item-right {
   width: 50%;
   text-align: center;
   padding: 10px;
   box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.menu-item-left {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border-right: 1px solid #ddd; /* Horizontal line */
+}
+
+/* 菜单内的图标样式 */
+.icon-left, .icon-right{
+  width: 100px; /* 图片宽度，根据需要调整 */
+  height: 100px; /* 图片高度，根据需要调整 */
+  margin-bottom: 5px; /* 与文字的间隔 */
+}
+
+.icon-bottom {
+  width: 300px; /* 图片宽度，根据需要调整 */
+  height: 120px; /* 图片高度，根据需要调整 */
+  margin-bottom: 5px; /* 与文字的间隔 */
+}
+
+/* 使文字和图片垂直居中对齐 */
+.menu-item-left, .menu-item-right, .menu-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item-right {
+  border-left: 1px solid #ddd;
 }
 
 .left {
@@ -40,5 +75,5 @@
 .menu-bottom {
   text-align: center;
   padding: 10px;
-  background-color: #f3f3f3; /* Different background for visual separation */
+  background-color: #ffffff;
 }

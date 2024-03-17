@@ -1,4 +1,4 @@
-// pages/mine/myInfo.js
+// pages/mine/myInfo/index.js
 Page({
 
   /**
