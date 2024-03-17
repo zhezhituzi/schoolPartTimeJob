@@ -1,66 +1,34 @@
-// pages/mine/myInfo/index.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    userInfo: {
+      nickName: '', // 默认昵称
+      phone: '', // 电话号码
+      class: '', // 班级
+      bio: '' // 简介
+    },
+    isEditing: false // 是否处于编辑状态
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
+  onLoad: function() {
+    // 加载时获取存储的用户信息
+    const storedInfo = wx.getStorageSync('userInfo');
+    if (storedInfo) {
+      this.setData({ userInfo: storedInfo });
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
+  onInput: function(e) {
+    // 更新用户信息数据
+    const field = e.currentTarget.dataset.field;
+    this.data.userInfo[field] = e.detail.value;
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
+  toggleEdit: function() {
+    // 切换编辑状态
+    this.setData({ isEditing: !this.data.isEditing });
+    if (!this.data.isEditing) {
+      // 保存编辑后的信息
+      wx.setStorageSync('userInfo', this.data.userInfo);
+    }
   }
-})
+});

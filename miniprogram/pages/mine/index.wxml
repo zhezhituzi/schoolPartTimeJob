@@ -2,7 +2,7 @@
   <view class="profile-section">
     <block wx:if="{{!userInfo.avatarUrl}}">
       <!-- 未登录状态 -->
-      <button class="not-logged-in" oopen-type="getUserProfile" bindtap="onGetUserProfile" lang="zh_CN">点击加载头像</button>
+      <button class="not-logged-in" open-type="getUserProfile" bindtap="onGetUserProfile" lang="zh_CN">点击加载头像</button>
     </block>
     <block wx:else>
       <!-- 已登录状态 -->
@@ -14,8 +14,8 @@
   </view>
 
   <view class="nav-section">
-    <navigator class="nav-item" bindtap="navigateToLogin">我的信息</navigator>
-    <navigator class="nav-item" bindtap="navigateToLogin">我的招聘</navigator>
+    <navigator url="/pages/mine/myInfo/index" class="nav-item">我的信息</navigator>
+    <view class="nav-item" bindtap="navigateToPage" data-url="/pages/jobOffers/index">我的招聘</view>
     <navigator class="nav-item" bindtap="navigateToLogin">我的投递</navigator>
     <navigator class="nav-item" bindtap="navigateToLogin">联系我们</navigator>
   </view>

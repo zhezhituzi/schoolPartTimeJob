@@ -1,1 +1,57 @@
-/* pages/mine/myInfo/index.wxss */
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start; /* 使内容靠上对齐 */
+  margin-bottom: 10px;
+}
+
+.info-item text {
+  width: 80px;
+  margin-top: 0; /* 确保文本与输入框顶部对齐 */
+}
+
+
+.input-display,
+.textarea-display {
+  flex-grow: 1;
+  border: 1px solid transparent; /* 保持边框占据空间但不可见 */
+  background-color: transparent;
+  min-height: 30px; /* 设置最小高度确保文本位置不变 */
+}
+
+.input-edit,
+.textarea-edit {
+  flex-grow: 1;
+  border: 1px solid #ccc;
+  background-color: #FFFFE0; /* 淡黄色 */
+  min-height: 30px; /* 与非编辑模式相同的最小高度 */
+}
+
+.textarea-edit {
+  height: 100px; /* 设置高度以适应五行文本 */
+}
+
+
+.edit-btn {
+  position: fixed; /* 固定定位 */
+  left: 50%; /* 水平居中 */
+  transform: translateX(-50%); /* 由于left是50%，这个设置将按钮向左移动自身宽度的50%，以实现完全居中 */
+  bottom: 20px; /* 距离底部20px */
+  width: 50%; /* 按钮宽度，根据需求调整 */
+  max-width: 400px; /* 最大宽度，防止在宽屏设备上过宽 */
+  background-color: #1aad19;
+  color: white;
+  padding: 10px 0;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 可选：添加一些阴影效果增加立体感 */
+}
+
