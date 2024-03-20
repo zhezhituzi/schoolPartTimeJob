@@ -14,10 +14,9 @@ Page({
     // 筛选逻辑，例如按位置、行业、时段筛选
   },
   onJobTap: function(e) {
-    // 跳转到岗位详情页的逻辑
-    const id = e.currentTarget.dataset.id;
+    const jobId = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/jobDetail/jobDetail?id=' + id,
+      url: '/pages/jobInfo/index?id=' + jobId
     });
   }
 });

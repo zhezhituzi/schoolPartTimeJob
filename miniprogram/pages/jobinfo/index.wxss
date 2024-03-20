@@ -1,0 +1,22 @@
+/* pages/jobDetail/jobDetail.wxss */
+.container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-section {
+  margin-bottom: 10px;
+}
+
+.detail-title {
+  font-weight: bold;
+}
+
+.apply-btn {
+  margin-top: 20px;
+  background-color: #1aad19;
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+}

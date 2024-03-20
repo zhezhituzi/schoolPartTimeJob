@@ -14,6 +14,28 @@ App({
       });
     }
 
-    this.globalData = {};
+    try {
+      const userInfo = wx.getStorageSync('userInfo');
+      if (userInfo) {
+        // 如果获取到了用户信息，可以做一些初始化操作
+        console.log('获取到用户信息', userInfo);
+        // 例如将用户信息设置到全局状态中
+        this.globalData.userInfo = userInfo;
+        // 或者跳转到应用的主页
+      } else {
+        // 如果没有用户信息，可能需要显示登录界面或做其他操作
+        console.log('未获取到用户信息，可能未登录或未授权');
+        // 例如跳转到登录页面让用户登录
+        wx.redirectTo({
+          url: '/pages/login/login'
+        });
+      }
+    } catch (e) {
+      // 处理获取失败的情况
+      console.error('获取用户信息失败', e);
+    }
+  },
+  globalData: {
+    userInfo: null
   }
 });

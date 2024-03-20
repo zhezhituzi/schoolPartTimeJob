@@ -1,0 +1,11 @@
+<!-- index.wxml -->
+<view class="container">
+    <view class="contact-info">
+        <view class="title">兼职小程序</view>
+        <view class="item">姓名：曹光旭</view>
+        <view class="item">班级：软工二班</view>
+        <view class="item">学号：012922430312</view>
+    </view>
+</view>
+
+

@@ -1,0 +1,28 @@
+<!-- pages/jobDetail/jobDetail.wxml -->
+<view class="container">
+  <view class="detail-section">
+    <text class="detail-title">店铺名称：</text>
+    <text>{{jobDetail.storeName}}</text>
+  </view>
+  <view class="detail-section">
+    <text class="detail-title">店铺地址：</text>
+    <text>{{jobDetail.storeAddress}}</text>
+  </view>
+  <view class="detail-section">
+    <text class="detail-title">岗位：</text>
+    <text>{{jobDetail.position}}</text>
+  </view>
+  <view class="detail-section">
+    <text class="detail-title">工作时段：</text>
+    <text>{{jobDetail.workingHours}}</text>
+  </view>
+  <view class="detail-section">
+    <text class="detail-title">薪资：</text>
+    <text>{{jobDetail.salary}}</text>
+  </view>
+  <view class="detail-section">
+    <text class="detail-title">其他要求：</text>
+    <text>{{jobDetail.requirements}}</text>
+  </view>
+  <button class="apply-btn" bindtap="applyJob">申请投递</button>
+</view>

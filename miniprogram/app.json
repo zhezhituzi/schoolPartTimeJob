@@ -4,9 +4,10 @@
     "pages/categories/index",
     "pages/publishJob/index",
     "pages/mine/index",
-    "pages/jobinfo/jobinfo",
+    "pages/jobInfo/index",
     "pages/recruitment/recruitment",
     "pages/mine/myInfo/index",
+    "pages/mine/contactUs/index",
     "pages/jobOffers/index",
     "pages/logIn/index"
   ],
