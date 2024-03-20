@@ -1,19 +1,29 @@
-/* pages/login/login.wxss */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.login-section {
+.page {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50rpx;
 }
 
-button {
-  margin: 10px 0;
-  padding: 10px;
+.form-container {
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+  border: 1px solid #cccccc;
+  border-radius: 10rpx;
+}
+
+.btn {
+  width: 100%;
+  padding: 20rpx;
+  margin-bottom: 30rpx;
+  background-color: #1AAD19;
+  color: white;
+  border-radius: 10rpx;
+  border: none;
 }

@@ -13,8 +13,8 @@ App({
         this.globalData.userInfo = userInfo;
         if (!userInfo.phoneNumber) {
           // 如果用户信息中没有phoneNumber，引导用户去设置手机号码
-          wx.redirectTo({
-            url: '/pages/signUp/index'
+          wx.navigateTo({
+            url: '/pages/logIn/index'
           });
         } else {
           // 执行已登录且已设置手机号的用户的初始化操作
@@ -47,8 +47,8 @@ App({
         console.log('获取用户信息成功', res.userInfo);
         this.globalData.userInfo = res.userInfo;
         wx.setStorageSync('userInfo', res.userInfo);
-        wx.redirectTo({
-          url: '/pages/signUp/index'
+        wx.navigateTo({
+          url: '/pages/logIn/index'
         });
       },
       fail: (err) => {
