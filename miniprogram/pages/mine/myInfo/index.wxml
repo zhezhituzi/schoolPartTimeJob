@@ -2,19 +2,19 @@
   <view class="info-section">
     <view class="info-item">
       <text>姓名：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="请输入姓名" disabled="{{!isEditing}}" value="{{userInfo.nickName}}" bindinput="onInput" data-field="nickName"/>
+      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.nickName}}" bindinput="onInput" data-field="nickName"/>
     </view>
     <view class="info-item">
       <text>电话号：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="请输入电话号" disabled="{{!isEditing}}" value="{{userInfo.phone}}" bindinput="onInput" data-field="phone"/>
+      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.phone}}" bindinput="onInput" data-field="phone"/>
     </view>
     <view class="info-item">
       <text>班级：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="请输入班级" disabled="{{!isEditing}}" value="{{userInfo.class}}" bindinput="onInput" data-field="class"/>
+      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.class}}" bindinput="onInput" data-field="class"/>
     </view>
     <view class="info-item">
       <text>简介：</text>
-      <textarea class="{{isEditing ? 'textarea-edit' : 'textarea-display'}}" placeholder="请输入简介" disabled="{{!isEditing}}" value="{{userInfo.bio}}" bindinput="onInput" data-field="bio"></textarea>
+      <textarea class="{{isEditing ? 'textarea-edit' : 'textarea-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.bio}}" bindinput="onInput" data-field="bio"></textarea>
     </view>
   </view>
   <button class="edit-btn" bindtap="toggleEdit">{{isEditing ? '保存' : '编辑'}}</button>
