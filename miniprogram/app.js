@@ -12,6 +12,7 @@ App({
         console.log('用户信息存在', userInfo);
         this.globalData.userInfo = userInfo;
         if (!userInfo.phoneNumber) {
+          // todo 这里需要补弹出的框和判断有没有头像昵称的逻辑。
           // 如果用户信息中没有phoneNumber，引导用户去设置手机号码
           wx.navigateTo({
             url: '/pages/logIn/index'
