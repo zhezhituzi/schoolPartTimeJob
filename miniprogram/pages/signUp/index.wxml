@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="title">欢迎注册兼职小程序</view>
+  <input class="input" placeholder="手机号" type="number" maxlength="11" bindinput="onPhoneInput"/>
+  <input class="input" placeholder="密码" password="true" bindinput="onPasswordInput"/>
+  <input class="input" placeholder="确认密码" password="true" bindinput="onPasswordConfirmInput"/>
+  <button class="button" bindtap="onRegisterTap">注册</button>
+</view>

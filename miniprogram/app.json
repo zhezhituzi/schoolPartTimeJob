@@ -9,7 +9,8 @@
     "pages/mine/myInfo/index",
     "pages/mine/contactUs/index",
     "pages/jobOffers/index",
-    "pages/logIn/index"
+    "pages/logIn/index",
+    "pages/signUp/index"
   ],
   "window": {
     "navigationBarTextStyle": "white",
