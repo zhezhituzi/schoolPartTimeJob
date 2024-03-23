@@ -45,7 +45,7 @@ Page({
         if (user.password === password) {
           // 账号密码都正确了
           let userInfo = wx.getStorageSync('userInfo') || {};
-          userInfo.phoneNumber = phone;
+          userInfo.phone = phone;
           userInfo.password = password;
           try {
             wx.setStorageSync('userInfo', userInfo);

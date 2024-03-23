@@ -11,11 +11,20 @@ App({
       if (userInfo) {
         console.log('用户信息存在', userInfo);
         this.globalData.userInfo = userInfo;
-        if (!userInfo.phoneNumber) {
+        if (!userInfo.phone) {
           // todo 这里需要补弹出的框和判断有没有头像昵称的逻辑。
           // 如果用户信息中没有phoneNumber，引导用户去设置手机号码
-          wx.navigateTo({
-            url: '/pages/logIn/index'
+          wx.showModal({
+            title: '登录提示',
+            content: '您需要先登录',
+            confirmText: '点击登录',
+            showCancel: false,
+            success: (res) => {
+              if (res.confirm) {
+                // 用户点击了“点击登录”按钮
+                this.getUserProfile();
+              }
+            }
           });
         } else {
           // 执行已登录且已设置手机号的用户的初始化操作
