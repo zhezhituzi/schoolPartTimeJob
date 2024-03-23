@@ -1,21 +1,59 @@
 <view class="page">
+  <!-- 头像部分 -->
+  <view class="avatar-section" bindtap="onAvatarTap">
+    <view class="avatar {{userInfo.avatarId ? '' : 'default-avatar'}}">
+      <image wx:if="{{userInfo.avatarUrl}}" class="avatar-img" src="{{userInfo.avatarUrl}}" />
+    </view>
+  </view> <!-- 这里添加闭合标签 -->
+
+  <!-- 用户信息输入部分 -->
   <view class="info-section">
+    <!-- 姓名 -->
     <view class="info-item">
-      <text>姓名：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.nickName}}" bindinput="onInput" data-field="nickName"/>
+      <text class="title">姓名</text>
+      <input class="{{userInfo.name ? 'input-filled' : 'input'}}" placeholder="请填入姓名" value="{{userInfo.name}}" bindinput="onInput" data-field="name"/>
     </view>
+    <!-- 电话号 -->
     <view class="info-item">
-      <text>电话号：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.phone}}" bindinput="onInput" data-field="phone"/>
+      <text class="title">电话号</text>
+      <input class="{{userInfo.phone ? 'input-filled' : 'input'}}" placeholder="请填入电话号" value="{{userInfo.phone}}" bindinput="onInput" data-field="phone"/>
     </view>
+    <!-- 邮箱 -->
     <view class="info-item">
-      <text>班级：</text>
-      <input class="{{isEditing ? 'input-edit' : 'input-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.class}}" bindinput="onInput" data-field="class"/>
+      <text class="title">邮箱</text>
+      <input class="{{userInfo.email ? 'input-filled' : 'input'}}" placeholder="请填入邮箱" value="{{userInfo.email}}" bindinput="onInput" data-field="email"/>
     </view>
+    <!-- 性别 -->
     <view class="info-item">
-      <text>简介：</text>
-      <textarea class="{{isEditing ? 'textarea-edit' : 'textarea-display'}}" placeholder="未编辑" disabled="{{!isEditing}}" value="{{userInfo.bio}}" bindinput="onInput" data-field="bio"></textarea>
+      <text class="title">性别</text>
+      <input class="{{userInfo.gender ? 'input-filled' : 'input'}}" placeholder="请填入性别" value="{{userInfo.gender}}" bindinput="onInput" data-field="gender"/>
     </view>
-  </view>
-  <button class="edit-btn" bindtap="toggleEdit">{{isEditing ? '保存' : '编辑'}}</button>
+    <!-- 班级/组织 -->
+    <view class="info-item">
+      <text class="title">班级/组织</text>
+      <input class="{{userInfo.organization ? 'input-filled' : 'input'}}" placeholder="请填入班级/组织" value="{{userInfo.organization}}" bindinput="onInput" data-field="organization"/>
+    </view>
+  </view> <!-- 确保这里有闭合标签 -->
+
+  <!-- 开关选择部分 -->
+  <view class="switch-section">
+    <!-- 我找工作 -->
+    <view class="switch-item">
+      <text class="title">我找工作</text>
+      <image class="switch-img" src="{{userInfo.lookingForJob ? 'icons/switch_on.png' : 'icons/switch_off.png'}}" bindtap="onSwitchChange" data-field="lookingForJob"/>
+    </view>
+    <!-- 我招人 -->
+    <view class="switch-item">
+      <text class="title">我招人</text>
+      <image class="switch-img" src="{{userInfo.hiring ? 'icons/switch_on.png' : 'icons/switch_off.png'}}" bindtap="onSwitchChange" data-field="hiring"/>
+    </view>
+  </view> <!-- 确保这里有闭合标签 -->
+
+  <!-- 简介部分 -->
+  <view class="intro-section">
+    <textarea class="intro" placeholder="请输入简介" value="{{userInfo.intro}}" bindinput="onInput" data-field="intro"></textarea>
+  </view> <!-- 确保这里有闭合标签 -->
+
+  <!-- 保存按钮 -->
+  <button class="save-btn" bindtap="onSave">保存</button>
 </view>

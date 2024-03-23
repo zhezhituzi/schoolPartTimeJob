@@ -1,45 +1,80 @@
 Page({
   data: {
+    userInfo: {},
+    startTime: '00:00',
+    endTime: '00:00',
+    industryList: ['厨师', '快递', '外卖', '清洁', '安保'],
+    selectedIndustry: '',
+    placeList:['图书馆','宿舍','东食堂','西食堂','快递站','教学楼','校门口'],
+    selectedPlace: ''
     // 页面的初始数据
   },
   // 表单提交事件处理函数
   formSubmit: function(e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value);
-    // 在这里处理表单数据的提交
-    // 例如，调用微信的请求API进行异步提交
-    wx.request({
-      url: 'YOUR_API_ENDPOINT', // 您的后端API地址
-      method: 'POST',
-      data: e.detail.value,
-      success(res) {
-        // 提交成功后的反馈
-        wx.showToast({
-          title: '提交成功',
-          icon: 'success'
-        });
-        // 也可以选择跳转到其他页面
-        // wx.navigateTo({
-        //   url: '/pages/somepage/somepage'
-        // });
-      },
-      fail(err) {
-        // 提交失败的反馈
-        wx.showToast({
-          title: '提交失败',
-          icon: 'none'
-        });
-      }
+
+    const db = wx.cloud.database();
+    const jobCollection = db.collection('job');
+
+    // 将表单数据添加到集合中
+    jobCollection.add({
+        data: e.detail.value,
+        success: function(res) {
+            // 数据添加成功后的回调函数
+            console.log('数据添加成功，记录的 _id：', res._id);
+            wx.showToast({
+                title: '提交成功',
+                icon: 'success',
+                duration: 2000
+            });
+        },
+        fail: function(err) {
+            // 数据添加失败后的回调函数
+            console.error('数据添加失败：', err);
+            console.error('12122121', err);
+            wx.showToast({
+                title: '提交失败，请重试',
+                icon: 'none',
+                duration: 2000
+            });
+        }
     });
   },
-  // 底部导航点击事件处理函数
-  onTabItemTap(item) {
-    // 根据点击的 tabBar 项进行跳转
-    const pathMap = ['/pages/index/index', '/pages/categories/categories', '/pages/publishJob/index', '/pages/mine/index'];
-    const path = pathMap[item.index];
-    if (path) {
-      wx.switchTab({
-        url: path
-      });
+
+  onPickerChange: function(e) {
+    const selectedIndustry = this.data.industryList[e.detail.value];
+    this.setData({
+      selectedIndustry: selectedIndustry
+    });
+  },
+  onPlacePickerChange: function(e) {
+    const selectedPlace = this.data.placeList[e.detail.value];
+    this.setData({
+      selectedPlace: selectedPlace
+    });
+  },
+  onMultiPickerChange: function(e) {
+    const selectedIndexes = e.detail.value;
+    const selectedWorkHours = selectedIndexes.map(index => this.data.workHoursList[0][index]);
+    this.setData({
+      selectedWorkHours: selectedWorkHours
+    });
+  },
+  onStartTimeChange: function(e) {
+    this.setData({
+      startTime: e.detail.value
+    });
+  },
+  onEndTimeChange: function(e) {
+    this.setData({
+      endTime: e.detail.value
+    });
+  },
+  onLoad: function() {
+    // 从本地存储获取用户信息
+    const userInfo = wx.getStorageSync('userInfo');
+    if (userInfo) {
+      this.setData({ userInfo });
     }
   }
 });

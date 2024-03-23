@@ -15,3 +15,4 @@ node_modules/
 
 miniprogram/icons/
 miniprogram/images/
+*.png

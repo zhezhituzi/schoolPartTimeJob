@@ -1,43 +1,5 @@
 {
-  "pages": [
-    "pages/index/index"
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "校园兼职平台",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light"
-  },
-  "tabBar": {
-    "selectedColor": "#b4282d",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "/images/home.png",
-        "selectedIconPath": "/images/home-active.png"
-      },
-      {
-        "pagePath": "pages/categories/categories",
-        "text": "分类",
-        "iconPath": "/images/categories.png",
-        "selectedIconPath": "/images/categories-active.png"
-      },
-      {
-        "pagePath": "pages/notifications/notifications",
-        "text": "消息",
-        "iconPath": "/images/notifications.png",
-        "selectedIconPath": "/images/notifications-active.png"
-      },
-      {
-        "pagePath": "pages/mine/mine",
-        "text": "我的",
-        "iconPath": "/images/mine.png",
-        "selectedIconPath": "/images/mine-active.png"
-      }
-    ]
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "navigationBarTitleText": "发布岗位",
+  "navigationBarBackgroundColor": "#f8f8f8",
+  "navigationBarTextStyle": "black"
 }

@@ -1,57 +1,102 @@
 .page {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  align-items: center;
+  background-color: #ffffff;
 }
 
+/* 头像样式 */
+.avatar-section {
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ccc; /* 灰色背景，当默认头像显示时 */
+  overflow: hidden;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 输入框样式 */
 .info-section {
-  margin-bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .info-item {
   display: flex;
-  align-items: flex-start; /* 使内容靠上对齐 */
-  margin-bottom: 10px;
+  align-items: center;
+  margin-top: 15px;
 }
 
-.info-item text {
+.title {
   width: 80px;
-  margin-top: 0; /* 确保文本与输入框顶部对齐 */
+  color: #000;
 }
 
-
-.input-display,
-.textarea-display {
-  flex-grow: 1;
-  border: 1px solid transparent; /* 保持边框占据空间但不可见 */
-  background-color: transparent;
-  min-height: 30px; /* 设置最小高度确保文本位置不变 */
+.input {
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  color: #888; /* 灰色字体，用于提示用户填写 */
 }
 
-.input-edit,
-.textarea-edit {
-  flex-grow: 1;
+.input-filled {
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+  color: #000; /* 黑色字体，用于显示已填写的内容 */
+}
+
+/* 开关样式 */
+.switch-section {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.switch-item {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.switch-img {
+  width: 60px; /* 根据实际大小调整 */
+  height: 60px; /* 假设开关的高度是30px */
+  display: block; /* 使margin-left: auto生效 */
+  margin-left: auto;
+  margin-right: 10px; /* 假设与右侧有10px的间距 */
+}
+
+/* 简介样式 */
+.intro-section {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 15px;
+}
+
+.intro {
+  width: 100%;
   border: 1px solid #ccc;
-  background-color: #FFFFE0; /* 淡黄色 */
-  min-height: 30px; /* 与非编辑模式相同的最小高度 */
+  min-height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.textarea-edit {
-  height: 100px; /* 设置高度以适应五行文本 */
-}
-
-
-.edit-btn {
-  position: fixed; /* 固定定位 */
-  left: 50%; /* 水平居中 */
-  transform: translateX(-50%); /* 由于left是50%，这个设置将按钮向左移动自身宽度的50%，以实现完全居中 */
-  bottom: 20px; /* 距离底部20px */
-  width: 50%; /* 按钮宽度，根据需求调整 */
-  max-width: 400px; /* 最大宽度，防止在宽屏设备上过宽 */
-  background-color: #1aad19;
+/* 保存按钮样式 */
+.save-btn {
+  margin-top: 20px;
+  background-color: #1AAD19; /* 微信绿 */
   color: white;
-  padding: 10px 0;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 可选：添加一些阴影效果增加立体感 */
+  padding: 10px 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
 }
 

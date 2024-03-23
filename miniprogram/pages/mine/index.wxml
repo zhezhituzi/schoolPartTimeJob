@@ -7,7 +7,7 @@
       </block>
     </view>
     <view class="id-name-section">
-      <text class="user-name">{{userInfo.nickName || '点击设置昵称'}}</text>
+      <text class="user-name">{{userInfo.name || '点击设置昵称'}}</text>
     </view>
   </view>
 
