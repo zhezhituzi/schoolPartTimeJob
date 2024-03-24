@@ -9,12 +9,12 @@
   <!-- Job Listings -->
   <view class="jobs-list">
     <block wx:for="{{jobs}}" wx:key="id">
-      <view class="job-item" bindtap="onJobTap" data-id="{{item.id}}">
+      <view class="job-item" bindtap="onJobTap" data-id="{{item._id}}">
         <view class="job-info">
-          <text class="job-title">{{item.title}}</text>
-          <text class="job-salary">{{item.salary}}</text>
+          <text class="job-name">{{item.jobName}}</text>
+          <text class="job-salary">{{item.salary}} 元/小时</text>
         </view>
-        <text class="job-location">{{item.location}}</text>
+        <text class="job-location">{{item.selectedPlace}}</text>
       </view>
     </block>
   </view>

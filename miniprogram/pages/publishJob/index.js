@@ -15,6 +15,13 @@ Page({
 
     const db = wx.cloud.database();
     const jobCollection = db.collection('job');
+    const that = this
+
+    const _data = e.detail.value;
+    _data.selectedIndustry = that.data.selectedIndustry
+    _data.selectedPlace = that.data.selectedPlace
+    _data.startTime = that.data.startTime
+    _data.endTime = that.data.endTime
 
     // 将表单数据添加到集合中
     jobCollection.add({
