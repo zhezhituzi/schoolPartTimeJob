@@ -5,7 +5,7 @@ Page({
     endTime: '00:00',
     industryList: ['厨师', '快递', '外卖', '清洁', '安保'],
     selectedIndustry: '',
-    placeList:['图书馆','宿舍','东食堂','西食堂','快递站','教学楼','校门口'],
+    placeList:['图书馆','宿舍','东食堂','西食堂','快递站','教学楼'],
     selectedPlace: ''
     // 页面的初始数据
   },

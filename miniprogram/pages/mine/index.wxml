@@ -14,7 +14,7 @@
   <view class="nav-section">
     <navigator url="/pages/mine/myInfo/index" class="nav-item">我的信息</navigator>
     <view class="nav-item" bindtap="navigateToPage" data-url="/pages/jobOffers/index">我的招聘</view>
-    <view class="nav-item" bindtap="navigateToPage" data-url="/pages/jobInfo/index">我的投递</view>
+    <!-- <view class="nav-item" bindtap="navigateToPage" data-url="/pages/jobInfo/index">我的投递</view> -->
     <view class="nav-item" bindtap="navigateToPage" data-url="/pages/mine/contactUs/index">联系我们</view>
   </view>
 

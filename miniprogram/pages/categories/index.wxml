@@ -1,31 +1,24 @@
 <view class="page">
-  <!-- Search Bar -->
-  <view class="search-bar">
-    <input class="search-input" type="text" placeholder="搜索岗位" bindinput="onSearchInput"/>
-    <button class="search-btn" bindtap="onSearch">搜索</button>
-  </view>
-  
   <!-- Filter Options -->
   <view class="filter-bar">
-    <view class="filter-item" data-filter="location" bindtap="onFilterTap">位置</view>
-    <view class="filter-item" data-filter="industry" bindtap="onFilterTap">行业</view>
-    <view class="filter-item" data-filter="time" bindtap="onFilterTap">时段</view>
+    <view class="filter-item" data-filter="location" bindtap="showPlacePicker">{{selectedPlaceText}}</view>
+    <view class="filter-item" data-filter="industry" bindtap="showIndustryPicker">{{selectedIndustryText}}</view>
+    <view class="filter-item" data-filter="time" bindtap="showTimePicker">{{selectedTimeText}}</view>
   </view>
   
   <!-- Job Listings -->
   <view class="jobs-list">
     <block wx:for="{{jobs}}" wx:key="id">
-      <view class="job-item" bindtap="onJobTap" data-id="{{item.id}}">
+      <view class="job-item" bindtap="onJobTap" data-id="{{item._id}}">
         <view class="job-info">
-          <text class="job-title">{{item.title}}</text>
-          <text class="job-salary">{{item.salary}}</text>
+          <text class="job-name">{{item.jobName}}</text>
+          <text class="job-salary">{{item.salary}} 元/小时</text>
         </view>
-        <text class="job-location">{{item.location}}</text>
+        <text class="job-location">{{item.selectedPlace}}</text>
       </view>
     </block>
   </view>
-
-
+  
   <!-- Bottom Navigation Bar (Defined in app.json) -->
 </view>
 

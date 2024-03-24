@@ -1,102 +1,17 @@
-.page {
+@import "../../../style/weui.wxss";
+
+.avatar-container {
+  position: relative;
+  width: 100%; /* 确保容器宽度占满父容器 */
+  height: 25vw; /* 容器高度，确保足够空间放置头像 */
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-}
-
-/* 头像样式 */
-.avatar-section {
-  margin-top: 20px;
-}
-
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: #ccc; /* 灰色背景，当默认头像显示时 */
-  overflow: hidden;
 }
 
 .avatar-img {
-  width: 100%;
-  height: 100%;
-}
-
-/* 输入框样式 */
-.info-section {
-  width: 100%;
-  padding: 0 20px;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-}
-
-.title {
-  width: 80px;
-  color: #000;
-}
-
-.input {
-  flex: 1;
-  border-bottom: 1px solid #ccc;
-  padding: 5px;
-  color: #888; /* 灰色字体，用于提示用户填写 */
-}
-
-.input-filled {
-  flex: 1;
-  border-bottom: 1px solid #ccc;
-  padding: 5px;
-  color: #000; /* 黑色字体，用于显示已填写的内容 */
-}
-
-/* 开关样式 */
-.switch-section {
-  width: 100%;
-  padding: 0 20px;
-}
-
-.switch-item {
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-}
-
-.switch-img {
-  width: 60px; /* 根据实际大小调整 */
-  height: 60px; /* 假设开关的高度是30px */
-  display: block; /* 使margin-left: auto生效 */
-  margin-left: auto;
-  margin-right: 10px; /* 假设与右侧有10px的间距 */
-}
-
-/* 简介样式 */
-.intro-section {
-  width: 100%;
-  padding: 0 20px;
-  margin-top: 15px;
-}
-
-.intro {
-  width: 100%;
-  border: 1px solid #ccc;
-  min-height: 100px;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* 保存按钮样式 */
-.save-btn {
-  margin-top: 20px;
-  background-color: #1AAD19; /* 微信绿 */
-  color: white;
-  padding: 10px 40px;
-  border-radius: 5px;
-  border: none;
-  font-size: 16px;
+  width: 25vw; /* 头像宽度为视窗宽度的25% */
+  height: 25vw; /* 头像高度与宽度相同，确保1:1的长宽比 */
+  border-radius: 50%; /* 圆形头像 */
 }
 

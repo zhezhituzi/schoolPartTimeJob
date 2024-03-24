@@ -30,9 +30,50 @@ exports.main = async (event, context) => {
   // 如果提供了 selectedIndustry，添加该筛选条件
   if (event.selectedIndustry) {
     query = query.where({
-      industry: event.selectedIndustry // 筛选特定行业的工作
+      selectedIndustry: event.selectedIndustry // 筛选特定行业的工作
     })
   }
+
+  if (event.selectedPlace) {
+    query = query.where({
+      selectedPlace: event.selectedPlace // 筛选特定地点的工作
+    })
+  }
+
+  // 筛选特定时间的工作
+  const timeMapping = {
+    '上午': 9,
+    '中午': 12,
+    '下午': 15,
+    '晚上': 18
+  };
+
+  if (event.selectedTime){
+    console.log("转换后时间：", timeMapping[event.selectedTime]); // 使用 event.selectedTime
+    const checkTimeInRange = (selectedTime, startTime, endTime) => {
+      // 将时间字符串转换为小时数
+      const startHour = parseInt(startTime.split(':')[0]);
+      const endHour = parseInt(endTime.split(':')[0]);
+      const selectedHour = timeMapping[selectedTime]; // 使用参数 selectedTime
+  
+      // 检查选中的小时数是否在开始和结束小时之间
+      return selectedHour >= startHour && selectedHour <= endHour;
+    };
+  
+    // 遍历所有工作记录，过滤出符合时间条件的记录
+    const res = await query.get();
+    const filteredJobs = res.data.filter(job => {
+      return checkTimeInRange(event.selectedTime, job.startTime, job.endTime); // 正确地调用 checkTimeInRange 函数
+    });
+  
+    // 返回过滤后的工作记录
+    return {
+      data: filteredJobs,
+      lastId: filteredJobs.length > 0 ? filteredJobs[filteredJobs.length - 1]._id : null,
+      errMsg: '获取成功'
+    };
+  }
+  
 
   // 分页处理，根据前端传来的 lastId 进行分页
   if (event.lastId) {
